@@ -20,6 +20,15 @@ const Header = () => {
     { label: "Liên Hệ", href: "#contact" },
   ];
 
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -49,6 +58,7 @@ const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
+                onClick={(e) => scrollToSection(e, item.href)}
                 className="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium hover:-translate-y-0.5 transition-all duration-200"
                 style={{
                   opacity: 0,
@@ -84,21 +94,12 @@ const Header = () => {
                 <a
                   key={item.href}
                   href={item.href}
+                  onClick={(e) => scrollToSection(e, item.href)}
                   className="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <button
-                onClick={() => {
-                  onDownloadCV();
-                  setIsMobileMenuOpen(false);
-                }}
-                className="flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold"
-              >
-                Download CV
-              </button>
             </nav>
           </motion.div>
         )}

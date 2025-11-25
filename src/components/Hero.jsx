@@ -14,6 +14,13 @@ const Hero = ({ data }) => {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <section
       ref={sectionRef}
@@ -63,13 +70,13 @@ const Hero = ({ data }) => {
               transition={{ delay: 0.45, duration: 0.5 }}
               className="flex flex-wrap gap-4 justify-center md:justify-start mt-2"
             >
-              <a
-                href="#contact"
+              <button
+                onClick={() => scrollToSection("#contact")}
                 className="group flex items-center gap-2.5 min-w-[160px] justify-center rounded-xl h-14 px-7 bg-primary text-white text-base font-semibold hover:bg-blue-600 shadow-lg hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-1 transition-all duration-300 active:scale-95"
               >
                 <FiMail className="group-hover:rotate-12 transition-transform" />
                 <span>Liên Hệ Ngay</span>
-              </a>
+              </button>
             </motion.div>
           </motion.div>
 
