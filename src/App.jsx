@@ -14,7 +14,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Portfolio">
       <ScrollToTop />
       <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
         {/* Header */}
