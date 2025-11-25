@@ -3,6 +3,7 @@
 ## Bước 1: Tạo Repository trên GitHub
 
 1. **Truy cập GitHub:**
+
    - Mở trình duyệt: https://github.com/new
    - Đăng nhập vào tài khoản GitHub của bạn
 
@@ -22,26 +23,31 @@
 Mở PowerShell tại folder `react-portfolio` và chạy các lệnh sau:
 
 ### 2.1. Khởi tạo Git
+
 ```bash
 git init
 ```
 
 ### 2.2. Thêm tất cả files
+
 ```bash
 git add .
 ```
 
 ### 2.3. Commit
+
 ```bash
 git commit -m "Initial commit - Portfolio website"
 ```
 
 ### 2.4. Đổi branch sang main
+
 ```bash
 git branch -M main
 ```
 
 ### 2.5. Kết nối với GitHub
+
 **QUAN TRỌNG:** Thay `YOUR_USERNAME` và `YOUR_REPO_NAME` bằng thông tin của bạn!
 
 ```bash
@@ -49,11 +55,13 @@ git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 ```
 
 Ví dụ: Nếu username là `nda-1311` và repo là `portfolio`:
+
 ```bash
 git remote add origin https://github.com/nda-1311/portfolio.git
 ```
 
 ### 2.6. Push code lên GitHub
+
 ```bash
 git push -u origin main
 ```
@@ -65,21 +73,23 @@ git push -u origin main
 Sau khi tạo repository, cập nhật file `vite.config.js`:
 
 ```javascript
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: '/YOUR_REPO_NAME/',  // Thay YOUR_REPO_NAME bằng tên repo của bạn
+  base: "/YOUR_REPO_NAME/", // Thay YOUR_REPO_NAME bằng tên repo của bạn
   plugins: [react()],
-})
+});
 ```
 
 Ví dụ: Nếu repo là `portfolio`:
+
 ```javascript
 base: '/portfolio/',
 ```
 
 **Lưu ý:** Nếu repository tên là `YOUR_USERNAME.github.io` thì để:
+
 ```javascript
 base: '/',
 ```
@@ -89,6 +99,7 @@ base: '/',
 ## Bước 4: Deploy lên GitHub Pages
 
 ### 4.1. Commit thay đổi vite.config.js
+
 ```bash
 git add .
 git commit -m "Configure for GitHub Pages"
@@ -96,11 +107,13 @@ git push
 ```
 
 ### 4.2. Deploy
+
 ```bash
 npm run deploy
 ```
 
 Lệnh này sẽ:
+
 - Tự động build project (`npm run build`)
 - Tạo branch `gh-pages`
 - Push folder `dist` lên branch đó
@@ -124,11 +137,13 @@ Lệnh này sẽ:
 ## Bước 6: Truy cập Website
 
 Link của bạn sẽ là:
+
 ```
 https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/
 ```
 
 Ví dụ:
+
 ```
 https://nda-1311.github.io/portfolio/
 ```
@@ -163,8 +178,9 @@ npm run deploy
 
 ✅ `gh-pages` package đã được cài đặt
 ✅ Script `deploy` đã được thêm vào package.json:
-   - `predeploy`: Tự động build trước khi deploy
-   - `deploy`: Deploy folder dist lên GitHub Pages
+
+- `predeploy`: Tự động build trước khi deploy
+- `deploy`: Deploy folder dist lên GitHub Pages
 
 ---
 
@@ -196,16 +212,19 @@ npm run deploy
 ## 🆘 TROUBLESHOOTING
 
 ### Lỗi: "Permission denied"
+
 ```bash
 # Tạo Personal Access Token trên GitHub và dùng thay password
 # Settings → Developer settings → Personal access tokens → Generate new token
 ```
 
 ### Lỗi: "CSS/JS không load"
+
 - Kiểm tra `base` trong vite.config.js phải đúng với tên repo
 - Ví dụ: Repo tên `portfolio` → `base: '/portfolio/'`
 
 ### Trang 404
+
 - Kiểm tra Settings → Pages đã chọn đúng branch `gh-pages`
 - Đợi 1-2 phút để GitHub xử lý
 

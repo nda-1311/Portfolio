@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Projects = ({ data }) => {
   const ref = useRef(null);
@@ -41,7 +42,7 @@ const Projects = ({ data }) => {
               y: -8,
               transition: { duration: 0.2, ease: "easeOut" },
             }}
-            className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-500/10 transition-all cursor-pointer border border-slate-200 dark:border-slate-700"
+            className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-500/10 transition-all cursor-pointer border border-slate-200 dark:border-slate-700 flex flex-col"
           >
             <div className="relative overflow-hidden aspect-video">
               <div
@@ -51,24 +52,20 @@ const Projects = ({ data }) => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
 
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
                 {project.title}
               </h3>
-              <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-5">
+              <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 flex-grow line-clamp-4">
                 {project.description}
               </p>
-              <motion.a
-                href={project.link}
-                className="inline-flex items-center gap-2 rounded-xl h-11 px-5 bg-primary text-white text-sm font-semibold hover:bg-blue-600 shadow-md hover:shadow-lg hover:shadow-blue-500/30 transition-all"
-                whileHover={{
-                  x: 3,
-                  transition: { duration: 0.2, ease: "easeOut" },
-                }}
+              <Link
+                to={`/project/${project.id}`}
+                className="inline-flex items-center justify-center gap-2 rounded-xl h-11 px-5 bg-primary text-white text-sm font-semibold hover:bg-blue-600 shadow-md hover:shadow-lg hover:shadow-blue-500/30 transition-all w-full"
               >
                 Xem Chi Tiết
                 <FiExternalLink className="group-hover:rotate-45 transition-transform" />
-              </motion.a>
+              </Link>
             </div>
           </motion.div>
         ))}
