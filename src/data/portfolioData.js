@@ -1,6 +1,9 @@
 // Portfolio Data - Dễ dàng thay đổi nội dung tại đây
 import avt from "../assets/avt.jpg";
 import avt2 from "../assets/avt2.jpg";
+import qr1 from "../assets/qr1.png";
+import qr2 from "../assets/qr2.png";
+import qr3 from "../assets/qr3.png";
 
 export const portfolioData = {
   // Thông tin cá nhân
@@ -73,33 +76,36 @@ export const portfolioData = {
       id: 1,
       title: "QR Digital Business Card",
       description:
-        "Ứng dụng tạo danh thiếp kỹ thuật số hiện đại với mã QR. Người dùng có thể tạo, tùy chỉnh và chia sẻ danh thiếp cá nhân một cách nhanh chóng và chuyên nghiệp. Hỗ trợ nhiều định dạng xuất file và responsive trên mọi thiết bị.",
+        "Ứng dụng tạo danh thiếp kỹ thuật số với QR Code hiện đại, nhanh chóng và miễn phí 100%. Hỗ trợ upload ảnh lên cloud để chia sẻ đầy đủ thông tin qua QR code! Tạo danh thiếp chỉ trong 10 giây với giao diện đẹp mắt và responsive.",
       image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop&q=80",
       link: "https://github.com/nda-1311/QR-Digital-Business-Card",
-      liveLink: "",
+      liveLink: "https://nda-1311.github.io/QR-Digital-Business-Card/",
       technologies: [
-        "React",
-        "JavaScript",
+        "React 19",
+        "React Router v7",
         "Tailwind CSS",
-        "QR Code API",
-        "HTML2Canvas",
-        "Vite",
+        "QRCode.react",
+        "html2canvas",
+        "lz-string",
+        "ImgBB API",
+        "GitHub Pages",
       ],
       features: [
-        "Tạo danh thiếp kỹ thuật số với thông tin cá nhân đầy đủ",
-        "Tạo mã QR tự động từ thông tin người dùng",
-        "Upload ảnh đại diện cá nhân",
-        "Giao diện responsive, hiển thị đẹp trên mọi thiết bị",
-        "Xuất danh thiếp dưới dạng PNG, PDF hoặc chia sẻ link",
-        "Tùy chỉnh màu sắc và kiểu dáng danh thiếp",
-        "An toàn và bảo mật thông tin người dùng",
+        "⚡ Siêu Nhanh - Tạo danh thiếp trong 10 giây",
+        "🎨 UI Đẹp Mắt - Thiết kế hiện đại theo phong cách startup công nghệ",
+        "📱 Responsive - Hoạt động mượt mà trên mọi thiết bị",
+        "🔄 Real-time Preview - Xem trước danh thiếp ngay khi nhập",
+        "🌓 Dark/Light Mode - Chuyển đổi giao diện linh hoạt",
+        "💾 Xuất PNG - Tải xuống danh thiếp chất lượng cao với icons căn chỉnh hoàn hảo",
+        "🔗 Chia Sẻ Link - Link riêng cho mỗi danh thiếp, có thể chia sẻ",
+        "🎯 QR Code Thực Tế - Quét QR bằng điện thoại để xem danh thiếp đầy đủ",
+        "☁️ Cloud Storage - Avatar được lưu trên ImgBB cloud, không giới hạn",
+        "📦 Data Compression - Nén dữ liệu bằng lz-string để URL ngắn gọn",
+        "🔐 Hash Fragment - Dữ liệu được mã hóa an toàn trong URL",
+        "🚀 Dynamic Routing - Mỗi card có URL riêng biệt với scroll to top",
       ],
-      images: [
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1557683316-973673baf926?w=1200&auto=format&fit=crop&q=80",
-      ],
+      images: [qr1, qr2, qr3],
     },
     {
       id: 2,
