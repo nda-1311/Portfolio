@@ -115,7 +115,7 @@ export const portfolioData = {
       image:
         "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&auto=format&fit=crop&q=80",
       link: "https://github.com/nda-1311/Nhom36_FoodDelivery_MobileApp",
-      liveLink: "",
+      liveLink: "https://www.youtube.com/watch?v=bKaJO_GRvKQ",
       technologies: [
         "React Native",
         "TypeScript",
