@@ -14,7 +14,7 @@ export const portfolioData = {
       "Xây dựng giải pháp web hiện đại với React, Node.js và các công nghệ tiên tiến. Biến ý tưởng thành sản phẩm thực tế, mang lại trải nghiệm người dùng xuất sắc.",
     email: "1dap2xoe@gmail.com",
     phone: "0358102981",
-    location: "Hồ Chí Minh, Việt Nam",
+    location: "Thành phố Hồ Chí Minh, Việt Nam",
     // Ảnh mặc định, sẽ được thay thế bằng ảnh upload
     heroImage: avt,
     aboutImage: avt2,
@@ -76,7 +76,7 @@ export const portfolioData = {
       id: 1,
       title: "QR Digital Business Card",
       description:
-        "Ứng dụng tạo danh thiếp kỹ thuật số với QR Code hiện đại, nhanh chóng và miễn phí 100%. Hỗ trợ upload ảnh lên cloud để chia sẻ đầy đủ thông tin qua QR code! Tạo danh thiếp chỉ trong 10 giây với giao diện đẹp mắt và responsive.",
+        "Tiện ích danh thiếp kỹ thuật số với QR Code hiện đại, nhanh chóng và miễn phí 100%. Hỗ trợ upload ảnh lên cloud để chia sẻ đầy đủ thông tin qua QR code! Tạo danh thiếp chỉ trong 10 giây với giao diện đẹp mắt và responsive.",
       image:
         "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop&q=80",
       link: "https://github.com/nda-1311/QR-Digital-Business-Card",

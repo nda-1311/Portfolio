@@ -222,45 +222,93 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col gap-6"
         >
+          {/* Google Maps Embed */}
           <motion.div
             whileHover={{ scale: 1.02 }}
             className="w-full h-64 rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800 shadow-md"
           >
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuATXCJyH-eWDMws_TsmA0GZfIX4y_1Bu0QeadTC7HAqFG9JWy__63zHHqe0aD1H8EgczLMqty1IMOnrmWiseOJlWHER3GOME8opyMD88hrIzbkwf2HCIqHqGlLoNRmb0JXYbFqGQpB8tbCVXaCrj9xNTWARNwHlf3_Qysoww74xObY_7IH14u5GHhWMDf-eubxrOgyDzHWtNNRDKpLayGipEkeYPdTImYdCnWYddCqsipqJwHjTPfUtu-Rg21wT04VFZcrFY2fOzY_I"
-              alt="Map showing location"
-              className="w-full h-full object-cover"
-            />
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8578756583447!2d106.66834877583384!3d10.822200989334916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752917f6b0b5b5%3A0x8d6f1d8c8c8c8c8c!2zNjkgTMOqIFbEg24gVGjhu40sIFBoxrDhu51uZyAxNCwgR8OyIFbhuqVwLCBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1732588800000!5m2!1svi!2s"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Maps - 69 Lê Văn Thọ, Gò Vấp, TP.HCM"
+            ></iframe>
           </motion.div>
 
+          {/* Social Links */}
           <div className="flex justify-center md:justify-start gap-4">
             {[
               {
+                name: "GitHub",
                 icon: "M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.69c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.54 1.28.16 2.3.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.72c0 .27.18.58.69.48C19.13 20.17 22 16.42 22 12c0-5.52-4.48-10-10-10z",
-                href: "#",
+                href: "https://github.com/nda-1311",
               },
               {
-                icon: "M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z",
-                href: "#",
+                name: "Facebook",
+                icon: "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z",
+                href: "https://www.facebook.com/nda.1311",
               },
               {
-                icon: "M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z",
-                href: "#",
+                name: "Zalo",
+                // Zalo official logo SVG - uses multiple paths
+                icon: [
+                  "M 78.4 2.18 H 25.644 L 25.643 2.18 c 1.994 0.013 3.989 0.025 5.984 0.025 c 0.119 0 0.276 -0.059 0.335 0.136 c -0.038 0.352 -0.394 0.394 -0.61 0.53 c -3.891 2.28 -7.447 5.01 -10.431 8.388 c -4.929 5.578 -8.35 11.982 -9.507 19.429 c -2.043 13.143 2.064 24.303 11.355 33.615 c 1.649 1.67 1.865 2.967 0.551 5.205 c -1.589 2.691 -4.01 4.518 -6.582 6.188 c -0.276 0.157 -0.551 0.352 -0.826 0.53 c -0.411 0.352 -0.157 0.53 0.195 0.687 v -0.008 c 5.01 0.983 9.901 0.314 14.716 -1.157 c 1.632 -0.492 3.259 -0.983 4.912 -1.394 c 1.119 -0.297 2.297 -0.237 3.378 0.157 c 12.457 4.281 24.752 3.891 36.853 -1.416 c 4.929 -2.179 9.43 -5.247 13.241 -9.074 c 0.195 -0.195 0.335 -0.492 0.687 -0.513 c 0.178 0.275 0.081 0.568 0.081 0.865 v 11.495 c 0 0.002 0 0.003 0 0.005 L 90 75.865 V 13.78 C 90 7.373 84.806 2.18 78.4 2.18 z",
+                  "M 54.896 33.548 v -1.127 h 3.374 v 15.835 h -1.928 c -0.793 0 -1.441 -0.64 -1.441 -1.433 l 0 0 c -1.361 0.992 -3.039 1.585 -4.853 1.585 c -4.544 0 -8.227 -3.679 -8.227 -8.218 s 3.683 -8.218 8.227 -8.218 C 51.857 31.963 53.536 32.552 54.896 33.548 C 54.896 33.544 54.896 33.548 54.896 33.548 z M 40.943 27.331 v 0.513 c 0 0.958 -0.127 1.738 -0.75 2.657 l -0.076 0.085 c -0.136 0.153 -0.454 0.517 -0.606 0.712 L 28.681 44.886 h 12.258 v 1.924 c 0 0.797 -0.648 1.441 -1.445 1.441 H 23.617 v -0.907 c 0 -1.11 0.275 -1.606 0.623 -2.123 l 11.541 -14.288 H 24.095 v -3.607 h 16.848 V 27.331 z M 62.36 48.256 c -0.665 0 -1.204 -0.538 -1.204 -1.199 V 27.331 h 3.611 v 20.925 H 62.36 z M 75.444 31.862 c 4.573 0 8.282 3.709 8.282 8.278 c 0 4.573 -3.709 8.278 -8.282 8.278 c -4.573 0 -8.282 -3.709 -8.282 -8.278 C 67.162 35.57 70.867 31.862 75.444 31.862 z M 50.043 45.018 c 2.674 0 4.84 -2.166 4.84 -4.836 c 0 -2.666 -2.166 -4.832 -4.84 -4.832 c -2.674 0 -4.84 2.166 -4.84 4.832 C 45.203 42.856 47.373 45.018 50.043 45.018 z M 75.444 45.013 c 2.687 0 4.87 -2.183 4.87 -4.87 c 0 -2.687 -2.183 -4.866 -4.87 -4.866 c -2.691 0 -4.87 2.179 -4.87 4.866 C 70.57 42.831 72.748 45.013 75.444 45.013 z",
+                  "M 16.106 76.912 c -0.352 -0.157 -0.606 -0.335 -0.195 -0.687 c 0.276 -0.178 0.551 -0.373 0.826 -0.53 c 2.573 -1.67 4.993 -3.497 6.582 -6.188 c 1.314 -2.238 1.098 -3.535 -0.551 -5.205 c -9.291 -9.312 -13.398 -20.472 -11.355 -33.615 c 1.157 -7.447 4.578 -13.851 9.507 -19.429 c 2.984 -3.378 6.54 -6.108 10.431 -8.388 c 0.216 -0.136 0.572 -0.178 0.61 -0.53 c -0.059 -0.195 -0.216 -0.136 -0.335 -0.136 c -6.62 0 -13.241 -0.14 -19.84 0.038 C 5.48 2.421 0 7.313 0 14.327 c 0.038 20.51 0 41.003 0 61.491 c 0 6.349 4.853 11.673 11.198 11.927 c 5.366 0.199 10.749 0.021 16.11 0.021 c 0.394 0 0.788 0.021 1.174 0.064 h 28.389 c 7.074 0 14.144 0.038 21.218 0 h 0.097 c 6.561 -0.059 11.825 -5.404 11.787 -11.965 V 64.37 c 0 -0.297 0.097 -0.589 -0.081 -0.865 c -0.352 0.021 -0.492 0.318 -0.687 0.513 c -3.81 3.827 -8.312 6.896 -13.241 9.074 c -12.101 5.307 -24.396 5.696 -36.853 1.416 c -1.081 -0.394 -2.259 -0.453 -3.378 -0.157 c -1.653 0.411 -3.281 0.903 -4.912 1.394 c -4.815 1.471 -9.706 2.14 -14.716 1.157",
+                ],
+                href: "https://zalo.me/0358102981",
+                viewBox: "0 0 90 90",
+                isMultiPath: true,
               },
             ].map((social, index) => (
-              <a
+              <motion.a
                 key={index}
                 href={social.href}
-                className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary hover:scale-110 hover:-translate-y-1 transition-all duration-200"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{
+                  scale: 1.15,
+                  y: -4,
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 20,
+                }}
+                className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors duration-200"
+                title={social.name}
               >
-                <svg
-                  className="h-6 w-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d={social.icon} />
-                </svg>
-              </a>
+                <div className="w-7 h-7 flex items-center justify-center">
+                  <svg
+                    className="w-full h-full"
+                    fill={social.name === "Zalo" ? "none" : "currentColor"}
+                    viewBox={social.viewBox || "0 0 24 24"}
+                  >
+                    {social.isMultiPath ? (
+                      social.icon.map((path, pathIndex) => (
+                        <path
+                          key={pathIndex}
+                          d={path}
+                          fill={
+                            social.name === "Zalo"
+                              ? pathIndex === 0
+                                ? "#fff"
+                                : "currentColor"
+                              : undefined
+                          }
+                        />
+                      ))
+                    ) : (
+                      <path d={social.icon} />
+                    )}
+                  </svg>
+                </div>
+              </motion.a>
             ))}
           </div>
         </motion.div>
