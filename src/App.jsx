@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ProjectDetail from "./components/ProjectDetail";
 import ScrollToTop from "./components/ScrollToTop";
+import VisitorStats from "./components/VisitorStats";
 import { portfolioData } from "./data/portfolioData";
 import "./App.css";
 
@@ -45,6 +46,9 @@ function App() {
 
         {/* Footer */}
         <Footer data={portfolioData} />
+
+        {/* Visitor Stats */}
+        <VisitorStats />
       </div>
     </Router>
   );
